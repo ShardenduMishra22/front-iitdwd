@@ -7,9 +7,9 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { toast } from "react-hot-toast"
-import axiosInstance from "@/util/axiosInstance"
 import { motion } from "framer-motion"
 import { useThemeStore } from "@/store/themeStore"
+import axios from "axios"
 
 const healthIssuesList = [
   "Cancer",
@@ -63,7 +63,7 @@ const DonorSurvey = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      await axiosInstance.post("/donor/postDonorSurvey", formData)
+      await axios.post("https://go-backend-gz41.onrender.com/donor/postDonorSurvey", formData)
       toast.success("Survey Submitted, Thank you for completing the donor survey.")
       navigate("/")
     } catch (error) {
