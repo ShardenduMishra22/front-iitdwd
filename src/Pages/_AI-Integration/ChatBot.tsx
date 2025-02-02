@@ -10,7 +10,6 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Badge } from "@/components/ui/badge"
 import axios from "axios"
 
-const GO_BACK = import.meta.env.VITE_GO_BACK as string
 
 const ChatBot = () => {
   const [input, setInput] = useState("")
@@ -28,9 +27,7 @@ const ChatBot = () => {
     setIsLoading(true)
 
     try {
-      const response = await axios.post(GO_BACK + "/chat", { query: input })
-      console.log(GO_BACK + "/chat")
-      console.log(response)
+      const response = await axios.post("https://go-backend-gz41.onrender.com/chat", { query: input })
       const parsedResponse = JSON.parse(response.data.response)
       const aiMessage = { role: "ai" as const, content: parsedResponse.answer }
       setMessages((prev) => [...prev, aiMessage])

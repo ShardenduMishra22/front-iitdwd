@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 
-const GO_BACK = import.meta.env.VITE_GO_BACK as string
 
 const healthIssuesList = [
   "cancer",
@@ -48,7 +47,7 @@ const PatientSurvey = () => {
   const giveSurvey = async (e: any) => {
     e.preventDefault()
     try {
-      await axios.post(GO_BACK + "/patient/postPatientSurvey", {
+      await axios.post("https://go-backend-gz41.onrender.com/chat" + "/patient/postPatientSurvey", {
         symptoms_illness: symptomsIllness,
         recent_medical_procedures: recentMedicalProcedures,
         travel_history: travelHistory,
