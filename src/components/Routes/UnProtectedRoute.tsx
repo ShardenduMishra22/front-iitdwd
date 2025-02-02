@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect, ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
-import MedicalLoader from '@/components/Loader';
 import axiosInstance from '@/util/axiosInstance';
 import React from 'react'; // Added import for React
 

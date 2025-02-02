@@ -1,5 +1,3 @@
-/* eslint-disable no-case-declarations */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -49,7 +47,7 @@ export interface IDonation {
     const setUser = useUserStore((state: any) => state.setUser)
     const { theme } = useThemeStore()
 
-    const [donationImpactFacts, setDonationImpactFacts] = useState([
+    const donationImpactFacts = [
         {
             title: "Cancer Support",
             fact: "Many cancer patients need daily blood transfusions during chemotherapy",
@@ -66,9 +64,9 @@ export interface IDonation {
             title: "Time Sensitivity",
             fact: "Someone needs blood every two seconds in India",
             },
-        ])
-        
-        const [motivationalFacts, setMotivationalFacts] = useState([
+        ]
+
+        const motivationalFacts = [
             {
             title: "Life Multiplier",
             fact: "If you donate blood 4 times a year for 50 years, you could help save up to 600 lives",
@@ -85,7 +83,7 @@ export interface IDonation {
             title: "Calorie Burn",
             fact: "You burn approximately 650 calories by donating one unit of blood",
             },
-        ])
+        ]
 
     useEffect(() => {
         fetchDonorInfo()
@@ -424,8 +422,8 @@ export interface IDonation {
                 <ChatBot />
             )
 
-        case "certificate":
-            const { tier, color } = getDonationTier(totalDonations)
+        case "certificate": 
+            { const { tier, color } = getDonationTier(totalDonations)
             const nextTier = getNextTier(totalDonations)
             const progress = getProgressToNextTier(totalDonations)
 
@@ -556,7 +554,7 @@ export interface IDonation {
                 </CardContent>
                 </Card>
             </motion.div>
-            )
+            ) }
 
         case "faq":
                 return <FAQ />
