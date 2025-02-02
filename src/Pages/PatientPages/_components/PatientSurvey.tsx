@@ -47,7 +47,7 @@ const PatientSurvey = () => {
   const giveSurvey = async (e: any) => {
     e.preventDefault()
     try {
-      await axios.post("https://go-backend-gz41.onrender.com/chat" + "/patient/postPatientSurvey", {
+      await axios.post("https://go-backend-gz41.onrender.com" + "/patient/postPatientSurvey", {
         symptoms_illness: symptomsIllness,
         recent_medical_procedures: recentMedicalProcedures,
         travel_history: travelHistory,
