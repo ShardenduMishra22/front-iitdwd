@@ -427,7 +427,7 @@ const Landing = () => {
               </Dialog>
 
               <motion.a
-                href="https://docs-git-main-shardendu-mishra.vercel.app/"
+                href="https://shardendu-mishra-blood-bank-docs.vercel.app/"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`gap-2 btn btn-outline btn-lg ${
