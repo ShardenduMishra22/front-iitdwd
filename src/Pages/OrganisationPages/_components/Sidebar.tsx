@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, BarChart, Package, MapPin, Droplet, Activity } from "lucide-react"

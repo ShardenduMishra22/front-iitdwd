@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, BarChart2, Users, UserPlus, Building2, MapPin, Droplet, LogOut } from "lucide-react"
